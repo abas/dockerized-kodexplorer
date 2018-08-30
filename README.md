@@ -19,12 +19,12 @@ and in this case, I use apachethen run the container by execute :
 docker run -d \
 --name kodexplorer \
 --hostname kodexplorer \
--p 80:80 \
--p 443:443 \
+-p 8880:80 \
+-p 8883:443 \
 -v /var/www/html:/var/www/html/host-www-resources \
 kodexplorer
 ```
-(you may need to modify the exposed port)
 And.. you're ready to rock!!. :D
+just access http://localhost:8880 or if you setup ssl and host it on server https://FQDN:8883
 
 o yah, first you will be ask the admin password. after you fill your password, you can login using __admin__ user.
