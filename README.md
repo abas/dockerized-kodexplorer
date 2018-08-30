@@ -8,9 +8,9 @@ this dockerized will have direct access to your webserver resources. so please b
 
 # usage
 the idea is = Docker + KodExplorer + Web Server Root Folder Volume   
-first build this image by clone the repository and execute this folder
+first build this image by clone the repository and execute this command
 ```
-cd dockerized-kodexplorer;
+cd dockerized-kodexplorer
 docker build -t kodexplorer .
 ```
 and in this case, I use apachethen run the container by execute :
