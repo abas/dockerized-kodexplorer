@@ -6,6 +6,8 @@ RUN yum install -y httpd php php-gd php-mbstring git
 
 RUN cd /var/www/html &&  git clone https://github.com/kalcaddle/KodExplorer
 
+COPY httpd.conf /etc/httpd/conf/
+
 RUN groupmod -g 212 tape && groupmod -g 33 apache && usermod -u 33 apache
 
 RUN mv /var/www/html/KodExplorer/ /var/www/html/explorer 
