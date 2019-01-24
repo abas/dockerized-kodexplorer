@@ -19,12 +19,17 @@ and in this case I use apache/httpd, then run the container by execute :
 docker run -d \
 --name kodexplorer \
 --hostname kodexplorer \
+-v /var/www/html:/var/www/html/host-www-resources \
+-v /tmp/kodexplorer:/var/run/httpd \
 -p 8880:80 \
 -p 8883:443 \
--v /var/www/html:/var/www/html/host-www-resources \
+
 kodexplorer
 ```
 And.. you're ready to rock!!. :D
 just access http://localhost:8880 or if you setup ssl and host it on server https://FQDN:8883
 
 o yah, first you will be ask the admin password. after you fill your password, you can login using __admin__ user.
+
+# Known Issue
+if container failed to start with error `httpd (pid 9) already running`. you can fix it by remove **httpd.pid** file on `/tmp/kodexplorer`.
