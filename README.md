@@ -13,7 +13,7 @@ first build this image by clone the repository and execute this command
 cd dockerized-kodexplorer
 docker build -t kodexplorer .
 ```
-and in this case, I use apachethen run the container by execute :
+and in this case I use apache/httpd, then run the container by execute :
 
 ```
 docker run -d \
