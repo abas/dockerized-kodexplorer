@@ -23,7 +23,6 @@ docker run -d \
 -v /tmp/kodexplorer:/var/run/httpd \
 -p 8880:80 \
 -p 8883:443 \
-
 kodexplorer
 ```
 And.. you're ready to rock!!. :D
