@@ -15,6 +15,7 @@ docker build -t kodexplorer .
 ```
 and in this case I use apache/httpd, then run the container by execute :
 
+### Via Docker Command
 ```
 docker run -d \
 --name kodexplorer \
@@ -25,6 +26,12 @@ docker run -d \
 -p 8883:443 \
 kodexplorer
 ```
+
+### Via Docker-Compose
+```
+docker-compose up -d
+```
+
 And.. you're ready to rock!!. :D
 just access http://localhost:8880 or if you setup ssl and host it on server https://FQDN:8883
 
