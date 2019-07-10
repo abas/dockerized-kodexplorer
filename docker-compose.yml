@@ -1,0 +1,29 @@
+#
+#                    ##        .
+#              ## ## ##       ==
+#           ## ## ## ##      ===
+#       /""""""""""""""""\___/ ===
+#  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+#       \______ o          __/
+#         \    \        __/
+#          \____\______/
+#
+#          |          |
+#       __ |  __   __ | _  __   _
+#      /  \| /  \ /   |/  / _\ |
+#      \__/| \__/ \__ |\_ \__  |
+#
+version: "3"
+services:
+  kodexplorer:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: kodexplorer
+    hostname: kodexplorer
+    volumes:
+      - /var/www/html:/var/www/html/host-www-resources
+      - /tmp/kodexplorer:/var/run/httpd
+    ports:
+      - 8880:80
+      - 8883:443
